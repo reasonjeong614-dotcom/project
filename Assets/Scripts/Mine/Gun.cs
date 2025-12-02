@@ -89,7 +89,7 @@ public class Gun : MonoBehaviour
 
         //발사 방향 (조금 위쪽으로)
         Vector3 dir = (targetPoint - firePoint.position).normalized;
-        dir = (dir + Vector3.up * 0.3f).normalized;
+        dir = (dir + Vector3.up * 1.2f).normalized;
 
         //수류탄 생성
         GameObject grenade = Instantiate(grenadePrefab, firePoint.position, Quaternion.LookRotation(dir));
