@@ -2,7 +2,7 @@ using UnityEngine;
 public class CamRotate : MonoBehaviour
 {
     [SerializeField]
-    float mouseSensitivity = 5f;
+    float mouseSensitivity = 10f;
 
     Camera cam;
 
@@ -11,6 +11,8 @@ public class CamRotate : MonoBehaviour
     private void Start()
     {
         cam = GetComponentInChildren<Camera>();
+        // 마우스를 화면 중앙에 고정하고 보이지 않게
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -20,17 +22,12 @@ public class CamRotate : MonoBehaviour
 
     void CameraMove()
     {
-        bool click = Input.GetMouseButton(0);
-
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-        if (click)
-        {
-            transform.Rotate(Vector3.up * mouseX);
-            angleX -= mouseY;
-        }
-
+        transform.Rotate(Vector3.up * mouseX);  //좌우 회전 (플레이어 몸통 회전)
+       
+        angleX -= mouseY;                       //상하 회전 (카메라만 위,아래로)
         angleX = Mathf.Clamp(angleX, -90f, 90f);
         cam.transform.localRotation = Quaternion.Euler(angleX, 0f, 0f);
     }
