@@ -36,6 +36,8 @@ public class EnemyFSM : MonoBehaviour
     float attTime = 2f; //공격 딜레이
     float timer = 0;
 
+    Animator animator;
+
     void Start()
     {
         //시작 지점 저장
@@ -49,6 +51,8 @@ public class EnemyFSM : MonoBehaviour
         agent.enabled = false;
 
         state = EnemyState.Idle;
+
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -72,6 +76,7 @@ public class EnemyFSM : MonoBehaviour
 
     void Idle()
     {
+        animator.SetBool("isMoving", false);
         if (Vector3.Distance(transform.position, player.position) < findRange)
         {
             state = EnemyState.Move;
@@ -81,6 +86,7 @@ public class EnemyFSM : MonoBehaviour
     void Move()
     {
         agent.enabled = true;
+        animator.SetBool("isMoving", true);
 
         //시작 지점에서 너무 멀어지면 돌아가기
         if (Vector3.Distance(transform.position, startPoint) > moveRange)
@@ -122,6 +128,7 @@ public class EnemyFSM : MonoBehaviour
             timer += Time.deltaTime;
             if(timer > attTime)
             {
+                animator.SetTrigger("isAttacking");
                 //때찌
                 timer = 0;
             }
