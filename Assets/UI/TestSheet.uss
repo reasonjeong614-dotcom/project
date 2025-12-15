@@ -1,0 +1,16 @@
+.title-label {
+    font-size: 20px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(162, 176, 255);
+    background-position-x: center 0;
+}
+
+.login-button {
+    background-color: rgb(255, 248, 150);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

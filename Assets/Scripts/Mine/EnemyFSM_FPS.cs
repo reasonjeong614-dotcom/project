@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyFSM : MonoBehaviour
+public class EnemyFSM_FPS : MonoBehaviour
 {
     //유한 상태 머신 => 유한한 수의 상태(state)와 상태들 사이의 전환(transition)을 조건(condition)으로 정의
 
@@ -30,8 +30,8 @@ public class EnemyFSM : MonoBehaviour
 
     //몬스터 일반 변수
     int hp = 100;
-    int att = 5;
-    float speed = 1f;
+    //int att = 5;
+    //float speed = 1f;
 
     float attTime = 2f; //공격 딜레이
     float timer = 0;

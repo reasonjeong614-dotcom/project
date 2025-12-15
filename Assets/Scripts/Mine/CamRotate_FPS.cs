@@ -1,5 +1,5 @@
 using UnityEngine;
-public class CamRotate : MonoBehaviour
+public class CamRotate_FPS : MonoBehaviour
 {
     [SerializeField]
     float mouseSensitivity = 10f;

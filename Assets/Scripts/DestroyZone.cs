@@ -49,7 +49,7 @@ public class DestroyZone : MonoBehaviour
             //pf.bulletPool.Add(other.gameObject);
 
             //이놈아가 제일 최적화 잘된 코드임
-            pf.ReloadPool(other.gameObject);
+            //pf.ReloadPool(other.gameObject);
         }
 
         // 충돌한 오브젝트의 레이어가 "Enemy"인 경우

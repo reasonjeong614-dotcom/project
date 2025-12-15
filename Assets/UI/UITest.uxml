@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/TestSheet.uss?fileID=7433441132597879392&amp;guid=5f62702faf110f344a9e8cbc17be29f3&amp;type=3#TestSheet" />
+    <ui:VisualElement style="overflow: hidden; flex-direction: column; flex-wrap: nowrap; align-self: auto; height: 401px; width: 745px; align-items: stretch; margin-top: 18px; margin-left: 18px; margin-right: 18px; margin-bottom: 18px; padding-bottom: 0; position: absolute; right: 52px; left: auto; top: auto; transform-origin: center; bottom: 45px;">
+        <ui:Label text="게임 시작하기" name="GameStart" class="title-label" style="height: 53px; width: 258px; position: absolute; top: 10px; left: 19px; font-size: 25px; -unity-font-definition: url(&quot;project://database/Assets/Samples/Cinemachine/3.1.5/Shared%20Assets/UI/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=d93869bdf22624387bae18a40dc7d7ce&amp;type=3#NotInter-Regular&quot;);" />
+        <ui:TextField label="ID" name="ID" style="position: absolute; top: 122px; left: 133px; height: 53px; width: 560px; font-size: 30px;" />
+        <ui:TextField label="PW" placeholder-text="filler text" name="PW" style="position: absolute; top: 204px; left: 133px; height: 53px; width: 560px; font-size: 30px;" />
+        <ui:Button text="로그인" name="Login" class="login-button" style="position: absolute; top: 318px; left: 537px; height: 62px; width: 168px; font-size: 30px;" />
+    </ui:VisualElement>
+    <ui:Foldout text="Foldout" style="height: 30px; width: 153px; position: absolute; top: 25px; left: 29px;" />
+    <ui:Slider label="Slider" value="42" high-value="100" style="height: 87px; width: 331px; position: absolute; top: 81px; left: 46px;" />
+    <ui:DropdownField label="Dropdown" style="height: 34px; width: 280px; position: absolute; top: 187px; left: 54px;" />
+</ui:UXML>
